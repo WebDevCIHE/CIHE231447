@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.jpg" alt="Car Sale Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register as Seller</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="search.html">Search Cars</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Search Cars</h1>
+        <form id="search-form">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location">
+
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Car Sale. All rights reserved.</p>
+    </footer>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

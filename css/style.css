@@ -1,0 +1,427 @@
+/* Define CSS Variables for common values */
+:root {
+  --primary-color: #000000;
+  --secondary-color: #555;
+  --background-color: #f9f9f9;
+  --border-color: #ddd;
+  --font-color: #fff;
+  --primary-font: Arial, sans-serif;
+  --padding-small: 1rem;
+  --padding-medium: 2rem;
+  --padding-large: 3rem;
+  --max-width-main: 1200px;
+  --max-width-form: 500px;
+  --max-width-form-large: 600px;
+}
+
+/* Prevent bounce effect */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbar while maintaining scrollability */
+html {
+  overflow: hidden; /* Hide scrollbar */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(
+    --primary-font
+  ); /* Could have used a custom font here, but using generic font/whatever is the primary one on the system */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Header styling */
+header {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  padding: var(--padding-small) var(--padding-medium);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 150px;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Main content styling */
+main {
+  flex: 1;
+  padding: var(--padding-medium);
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Form styling */
+form {
+  max-width: var(--max-width-form);
+  margin: 0 auto;
+  padding: var(--padding-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-color);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+/* Mission Statement */
+#mission-statement {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#mission-statement p {
+  font-size: 1.1em;
+}
+
+/* Featured Cars */
+#featured-cars .car-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#featured-cars .car-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#featured-cars .car-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+#featured-cars .car-item h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#featured-cars .car-item p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Testimonials */
+#testimonials blockquote {
+  background-color: #fff;
+  border-left: 5px solid #0051a9;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#testimonials blockquote p {
+  margin: 0;
+}
+
+#testimonials blockquote cite {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  font-style: normal;
+  color: #555;
+}
+
+/* Call to Action */
+#call-to-action {
+  background-color: #0051a9;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#call-to-action a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#call-to-action a:hover {
+  text-decoration: none;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  text-align: center;
+  padding: var(--padding-small);
+}
+
+/* Car item styling */
+.car-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.car-item img {
+  margin-right: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: var(--font-color);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Search results styling */
+#search-results .car-item {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Hero section styling */
+#hero {
+  background: url("../img/staff.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: var(--padding-large) var(--padding-medium);
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: var(--padding-small);
+}
+
+#hero p {
+  font-size: 1.5rem;
+}
+
+/* About Us Section Styling */
+#about-us {
+  max-width: var(--max-width-main);
+  margin: 0 auto;
+  padding: var(--padding-medium);
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h2 {
+  text-align: center;
+  margin-bottom: var(--padding-medium);
+}
+
+.company-info p {
+  margin: 10px 0;
+}
+
+.staff-info {
+  margin-top: var(--padding-medium);
+}
+
+.staff-info h2 {
+  margin-bottom: var(--padding-small);
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--padding-small);
+}
+
+.staff-member {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+  padding: var(--padding-small);
+  border-radius: 8px;
+}
+
+.staff-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: var(--padding-small);
+}
+
+.staff-member h3 {
+  margin: 0;
+}
+
+.staff-member p {
+  margin: 0;
+}
+
+/* Password Strength Meter */
+#password-strength {
+  margin-top: 5px;
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#password-strength div {
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.strength-weak {
+  background-color: rgb(176, 0, 0);
+}
+
+.strength-medium {
+  background-color: rgb(182, 182, 0);
+}
+
+.strength-strong {
+  background-color: green;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  main {
+    padding: var(--padding-small);
+    width: 95%;
+  }
+
+  form {
+    padding: var(--padding-small);
+  }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  main {
+    padding: var(--padding-medium);
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0;
+  }
+
+  header {
+    padding: var(--padding-small) 5%;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  main {
+    padding: var(--padding-large);
+    max-width: var(--max-width-main);
+  }
+
+  form {
+    max-width: var(--max-width-form-large);
+    margin: 0 auto;
+    padding: var(--padding-medium);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+  }
+}
